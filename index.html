@@ -19,28 +19,23 @@
       rel="stylesheet"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
     <link rel="stylesheet" href="style.css" />
     <title>Weather Dashboard</title>
   </head>
-
   <body>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content">
         <a class="navbar-brand" href="#">Weather Dashboard</a>
       </nav>
     </div>
-    
     <div class="col-sm-3 m-3">
      <p><b>Search for a City:</b></p>
     </div>
-
     <form class="example" action="/action_page.php">
       <input type="text" name="search">
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
-
 <div class="row">
-  <div class="col-sm-3 m-3">
+  <div class="col-3 m-3">
     <ul class="list-group">
       <li class="list-group-item">Maine</li>
       <li class="list-group-item">New York</li>
@@ -51,26 +46,29 @@
       <li class="list-group-item">San Fransico</li>
       <li class="list-group-item">Hawaii</li>
     </ul>
-  </div>
-  <div class="square m-3">
-    <div class="center">
-    </div>
-  </div>
-</div>
-
+</div> 
+<br>
 <div class="container">
-  <div class="row">
-    <span class="border bg-light">
-    </span>  
-    <span class="border bg-light">
-    </span>
-    <span class="border bg-light">
-    </span>
-    <span class="border bg-light">
-    </span>
-    <span class="border bg-light">
-    </span>
-  </div>    
-</div>
-  </body>
+  <div class="row" id="currentForecast"></div>
+  <div class="row" id="fiveDayForecast">
+    <div class="card-container">
+      <div class="row">
+        <span class="border bg-light">
+            </span>  
+        <span class="border bg-light">
+            </span>
+        <span class="border bg-light">
+            </span>
+        <span class="border bg-light">
+            </span>
+        <span class="border bg-light">
+            </span>
+    </div>    
+  </div>
+  
+
+
+
+  
+</body>
 </html>
