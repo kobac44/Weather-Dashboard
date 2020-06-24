@@ -23,14 +23,14 @@
     <title>Weather Dashboard</title>
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
         <a class="navbar-brand" href="#">Weather Dashboard</a>
       </nav>
     </div>
     <div class="col-sm-3 m-3">
      <p><b>Search for a City:</b></p>
     </div>
-    <form class="example" action="/action_page.php">
+    <form class="form-control" action="/action_page.php">
       <input type="text" name="search">
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
@@ -50,25 +50,56 @@
 <br>
 <div class="container">
   <div class="row" id="currentForecast"></div>
+    <div class="col">
+                <p id="today_temp"></p>
+                <p id="today_humidity"></p>
+                <p id="today_wind_speed"></p>
+                <img id="today_icon_div" src="">
+    </div>
+  <div class="row">  
   <div class="row" id="fiveDayForecast">
     <div class="card-container">
-      <div class="row">
+      <div class="row"> 
         <span class="border bg-light">
-            </span>  
+          <div id="day0" class="card-body mx-2 my-2">
+            <h5 id="0date"></h5>
+            <p id="0five_day_temp"></p>
+            <p id="0five_day_humidity"></p>
+            <img id="0five_day_icon" src=""> 
+        </div></span>  
         <span class="border bg-light">
+          <h5 id="1date"></h5>
+            <p id="1five_day_temp"></p>
+            <p id="1five_day_humidity"></p>
+            <img id="1five_day_icon" src="">
             </span>
         <span class="border bg-light">
+          <h5 id="2date"></h5>
+            <p id="2five_day_temp"></p>
+            <p id="2five_day_humidity"></p>
+            <img id="2five_day_icon" src="">
             </span>
         <span class="border bg-light">
+          <h5 id="3date"></h5>
+            <p id="3five_day_temp"></p>
+            <p id="3five_day_humidity"></p>
+            <img id="3five_day_icon" src="">
             </span>
         <span class="border bg-light">
+          <h5 id="4date"></h5>
+            <p id="4five_day_temp"></p>
+            <p id="4five_day_humidity"></p>
+            <img id="4five_day_icon" src="">
             </span>
     </div>    
   </div>
-  
+</div>
 
 
 
-  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+<script src="script.js"></script>
+
+
 </body>
 </html>

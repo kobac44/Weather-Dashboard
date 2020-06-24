@@ -6,11 +6,6 @@
 .navbar-brand {
   font-family: "Mukta", sans-serif;
   font-size: 30px;
-  text-align: center;
-}
-
-.wrapper {
-  background-color: rgb(210, 232, 252);
 }
 
 form.example input[type="text"] {
@@ -46,12 +41,17 @@ form.example button {
   background-color: #f1f1f1;
 }
 
+h4 {
+  margin: 10px;
+  margin-top: 20px;
+}
+
 span {
   position: relative;
   bottom: -200px;
   margin: 20px;
   width: 10px;
   padding: 60px;
-  right: 0%;
+  right: -2%;
   border-radius: 5px;
 }
