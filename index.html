@@ -30,9 +30,9 @@
     <div class="col-sm-3 m-3">
      <p><b>Search for a City:</b></p>
     </div>
-    <form class="form-control" action="/action_page.php">
-      <input type="text" name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
+    <form class="form-control">
+      <input type="text" name="search" id="get-weather"></input>
+      <button type="submit" id="run-search" class="fa fa-search"></i></button>
     </form>
 <div class="row">
   <div class="col-3 m-3">
@@ -48,6 +48,9 @@
 </div> 
 <br>
 <div class="container">
+  <span>
+    <div class="city"></div><img id="wicon"></img>
+  </span>
   <div class="row" id="currentForecast"></div>
     <div class="col">
                 <p id="today_temp"></p>
@@ -56,6 +59,7 @@
                 <img id="today_icon_div" src="">
     </div>
   <div class="row">  
+  <div class="city"></div><img id="wicon"></img>
   <div class="row" id="fiveDayForecast">
     <div class="card-container">
       <div class="row"> 
