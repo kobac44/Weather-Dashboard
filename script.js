@@ -7,12 +7,37 @@ let cities = [
   "Rexburg",
   "Hawaii",
 ];
-let url = "";
-letqueryurl = "";
+url = "https://api.openweathermap.org/data/2.5/forecast?q=";
+queryurl = url + city + APIkey;
 var apiKey = "bc446cf7ce1e7b9894b233c0b69caad0";
 let lat = "latitude";
 let lon = "longitude";
 let uvIndex = lat + lon;
+
+// store the value of the input
+let city = $("#searchTerm").val();
+
+let date = new Date();
+
+$("#searchTerm").keypress(function(event) { 
+	
+	if (event.keyCode === 13) { 
+		event.preventDefault();
+		$("#searchButton").click(); 
+	} 
+});
+
+$("#searchBtn").on("click", function() {
+
+  $('#currentForecast').addClass('show');
+
+  // get the value of the input from user
+  city = $("#searchTerm").val();
+  
+  // clear input box
+  $("#searchTerm").val("");  
+
+
 
 //get geolocation
 //https:api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&
@@ -23,7 +48,7 @@ function currentWeather() {
     longitude = position.coords.longitude;
     latitude = position.coords.latitude;
 
-    var queryURL =
+    const queryURL =
       "https://api.openweathermap.org/data/2.5/onecall?lat=" +
       lat +
       "&lon=" +
@@ -54,11 +79,10 @@ function currentWeather() {
   });
 }
 
-//forEach for the cities function
+// currentForecast function
+currentForecast();
 
-// search for a city, will need a local storage
-
-//will need an api key for currentForecast
+//forEach for the cities to display function
 
 //click on cities in the list group and see the current temperature
 
