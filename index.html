@@ -31,9 +31,9 @@
       <input type="text" name="search" id="get-weather"></input>
       <button type="submit" id="run-search" class="fa fa-search"></i></button>
     </form>
-<div class="row">
+<div class="row" >
   <div class="col-3 m-3">
-    <ul class="list-group" id="search-cities">
+    <ul class="city-name" id="search-cities">
       <li class="list-group-item">Maine</li>
       <li class="list-group-item">New York</li>
       <li class="list-group-item">North Carolia</li>
@@ -45,18 +45,22 @@
 </div> 
 <br>
 <div class="container">
-  <span>
-    <div class="city"></div><img id="wicon"></img>
-  </span>
+
+    <div>
+      <div id="cityDate"></div>
+      <img id="currentIcon" class="img-fluid">
+    </div>
+  
   <div class="row" id="currentForecast"></div>
     <div class="col">
-                <p id="today_temp"></p>
-                <p id="today_humidity"></p>
-                <p id="today_wind_speed"></p>
-                <img id="today_icon_div" src="">
+                <p id="temp"></p>
+                <p id="humidity"></p>
+                <p id="windSpeed"></p>
+                <p id="uvIndex"></p>
+                
     </div>
   <div class="row">  
-  <div class="city"></div><img id="wicon"></img>
+  <div class="city"></div><img id="icon"></img>
   <div class="row" id="fiveDayForecast">
     <div class="card-container">
       <div class="row"> 
@@ -97,7 +101,7 @@
 <p>5 Day Forecast></p>
 
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="script.js"></script>
 
